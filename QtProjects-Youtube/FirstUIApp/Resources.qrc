@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/Resources">
+        <file>Resources/btnoff-32x32.png</file>
+        <file>Resources/cancel2-24x24.png</file>
+        <file>Resources/edit-48x48.png</file>
+        <file>Resources/faq-icon.png</file>
+        <file>Resources/Íffnen.bmp</file>
+        <file>Resources/option-icon.png</file>
+        <file>Resources/paste.png</file>
+        <file>Resources/save-48x48.png</file>
+    </qresource>
+</RCC>
