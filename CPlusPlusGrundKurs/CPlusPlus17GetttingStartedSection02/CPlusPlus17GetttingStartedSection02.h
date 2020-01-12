@@ -13,3 +13,5 @@ void ExecuteList();
 void ExecuteList02();
 
 void ExecuteForwaredList01();
+
+void ExecuteDequeue();
