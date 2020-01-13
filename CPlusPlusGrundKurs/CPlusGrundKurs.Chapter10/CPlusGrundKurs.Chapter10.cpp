@@ -30,15 +30,31 @@ struct artikel {
 
 
 void showListing01();
+void ShowLsting007();
 void showListing02();
 void showListing03();
 void showListing04();
+ 
  
 
 
 int main()
 {
 
+	ShowLsting007();
+
+	// showListing01();
+
+	 // showListing02();
+
+	showListing04();
+
+
+	return 0;
+}
+
+void ShowLsting007()
+{
 	enum class wochentag { SO = 7, MO = 1, DI, MI, DO, FR, SA };
 
 	wochentag wtag01{ wochentag::FR }; // C++11-Style
@@ -60,15 +76,6 @@ int main()
 	case wochentag::SA: std::cout << "Samstag" << std::endl; break;
 	case wochentag::SO: std::cout << "Sonntag" << std::endl; break;
 	}
-
-	// showListing01();
-
-	 // showListing02();
-
-	showListing04();
-
-
-	return 0;
 }
 
 void showListing01()
