@@ -8,7 +8,7 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    /* QHBoxLayout programmatically
+    /* QHBoxLayout programmatically      */
     // Define the layout
     QHBoxLayout *layout = new QHBoxLayout;
 
@@ -21,7 +21,7 @@ Widget::Widget(QWidget *parent)
 
      // Set  the layout to the widget
      this->setLayout(layout);
-     */
+
 
 }
 
