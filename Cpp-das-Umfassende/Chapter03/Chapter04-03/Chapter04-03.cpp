@@ -10,7 +10,7 @@ int main() { //#
     Data const* data = new Data(5);
 #if 0 //#
     data->value = 7;         // dieses const sch?tzt Data
-#endif //#
+#endif //#      
     data = new Data(6);      // Zeiger neu zuweisen ist okay
     Data* const mehr = new Data(8);
     mehr->value = 9;         // jetzt okay
