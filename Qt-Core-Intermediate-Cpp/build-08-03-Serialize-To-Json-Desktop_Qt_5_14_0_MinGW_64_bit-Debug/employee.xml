@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee>
+    <FirstName>Vincent De Paul</FirstName>
+    <LastName>Tene Kengne</LastName>
+    <Department>Software Development</Department>
+    <EmployeeId>1102</EmployeeId>
+</Employee>

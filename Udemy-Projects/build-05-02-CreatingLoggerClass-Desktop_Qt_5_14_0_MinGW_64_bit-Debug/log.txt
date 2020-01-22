@@ -1,0 +1,20 @@
+ Mo Jan 20 10:57:59 2020 - Info: test! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 14
+Mo Jan 20 10:58:00 2020 - Debug: test(0x7afd30) Constructed..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 7
+Mo Jan 20 10:58:01 2020 - Warning: This is a test!!!..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 12
+Mo Jan 20 10:58:01 2020 - Info: Finished! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 24
+Mo Jan 20 10:58:35 2020 - Info: test! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 14
+Mo Jan 20 10:58:35 2020 - Debug: test(0x7afd30) Constructed..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 7
+Mo Jan 20 10:58:35 2020 - Warning: This is a test!!!..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 12
+Mo Jan 20 10:58:35 2020 - Info: Finished! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 24
+Mo Jan 20 11:00:47 2020 - Info: test! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 14
+Mo Jan 20 11:00:47 2020 - Debug: test(0x7afd30) Constructed..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 7
+Mo Jan 20 11:00:47 2020 - Warning: This is a test!!!..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 12
+Mo Jan 20 11:00:47 2020 - Info: Finished! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 24
+Mo Jan 20 11:02:04 2020 - Info: test! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 14
+Mo Jan 20 11:02:04 2020 - Debug: test(0x7afd30) Constructed..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 7
+Mo Jan 20 11:02:04 2020 - Warning: This is a test!!!..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 12
+Mo Jan 20 11:02:04 2020 - Info: Finished! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 24
+Mo Jan 20 11:08:18 2020 - Info: test! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 14
+Mo Jan 20 11:08:18 2020 - Debug: test(0x7afd30) Constructed..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 7
+Mo Jan 20 11:08:18 2020 - Warning: This is a test!!!..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\test.cpp line: 12
+Mo Jan 20 11:08:18 2020 - Info: Finished! in %2..\..\Qt-Core-Intermediate-Cpp\05-02-CreatingLoggerClass\main.cpp line: 24

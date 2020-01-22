@@ -1,0 +1,5 @@
+Mo Jan 20 10:31:32 2020 - Info: This is a info message in %2 file: ..\05-01-ExploringQDebug\main.cpp line: 66
+Mo Jan 20 10:55:28 2020 - Info: This is a info message in %2 file: ..\05-01-ExploringQDebug\main.cpp line: 66
+Mo Jan 20 10:56:11 2020 - Info: This is a info message in %2 file: ..\05-01-ExploringQDebug\main.cpp line: 66
+Mo Jan 20 10:56:25 2020 - Info: This is a info message in %2 file: ..\05-01-ExploringQDebug\main.cpp line: 66
+Mo Jan 20 10:57:33 2020 - Info: This is a info message in %2 file: ..\05-01-ExploringQDebug\main.cpp line: 66
