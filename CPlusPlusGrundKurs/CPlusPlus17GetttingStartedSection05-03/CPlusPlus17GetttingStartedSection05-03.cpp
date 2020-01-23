@@ -38,9 +38,20 @@ public:
 		cout << "Hello from MyClass " << name << endl;
 	}
 
+	MyClass getObject() {
+
+		MyClass myObj;
+		return myObj;
+	}
+
 };
 
 int MyClass::count = 0;
+
+void displayObject(MyClass obj) {
+	cout << "Hello from MyClass " << "" << endl;
+	obj.sayHello();
+}
 
 int main() {
 
@@ -49,6 +60,11 @@ int main() {
 		shared_ptr<MyClass> ptr1(new MyClass());
 		ptr1->sayHello();
 		cout << "\nUse count is " << ptr1.use_count() << endl;
+
+		displayObject(*ptr1);
+
+		auto newObject = ptr1->getObject();
+
 
 		{
 			shared_ptr<MyClass> ptr2 = ptr1;
