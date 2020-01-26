@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{0A9B0112-638A-4D7D-A711-B08EDA3AB979}</ProjectGuid>
+    <ProjectGuid>{6D7D1F17-AE67-45FE-8E0B-9BF8D5C4C580}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>kap05Grundbausteinelst12521fpclassify</RootNamespace>
+    <RootNamespace>kap21Klassenlst12933contvec</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -90,7 +90,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,7 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="kap05Grundbausteine_lst125-21fpclassify.cpp" />
+    <ClCompile Include="kap21Klassen_lst129-33cont-vec.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{0A9B0112-638A-4D7D-A711-B08EDA3AB979}</ProjectGuid>
+    <ProjectGuid>{853081E2-C542-4BEC-9D6F-E00D4D3495F0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>kap05Grundbausteinelst12521fpclassify</RootNamespace>
+    <RootNamespace>kap13Funktionenlst10227callbyvalue01</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -90,7 +90,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,7 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="kap05Grundbausteine_lst125-21fpclassify.cpp" />
+    <ClCompile Include="kap13Funktionen_lst102-27-call-by-value01.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
