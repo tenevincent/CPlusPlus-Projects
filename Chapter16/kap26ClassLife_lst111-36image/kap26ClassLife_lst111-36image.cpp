@@ -1,4 +1,4 @@
-#include <vector>
+ #include <vector>
 class Image {
     std::vector<unsigned char> data_;
 public:
