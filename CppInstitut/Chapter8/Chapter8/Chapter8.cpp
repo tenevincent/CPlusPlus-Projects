@@ -7,38 +7,48 @@
 
 #include "Stack.h"
 
-
+#include <iostream>
+#include <exception>
+#include <stdexcept>
 using namespace std;
+
 class Int {
 public:
     int v;
-    Int(int a) { v = a; }
+    Int(int a) : v(a) {}
 };
 
-    
-class N {
-public:
-    float x;
-    N() { x = 0.0; }
-    N(float a) { x = a; }
-    N(N& n) { x = n.x; }
-};
-
-ostream& operator <<(ostream& o, Int& a) {
-    a.v++;
-    return o << a.v;
+void a() {
+    throw Int(1);
 }
 
+void b() {
+    try {
+        a();
+    }
+    catch (Int & i) {
+        throw Int(i.v + 1);
+    }
+}
 
- 
+void c() {
+    try {
+        b();
+    }
+    catch (...) {
+        throw;
+    }
+}
 
 int main() {
 
-    char ii = 0xA;
+    try {
+        c();
+    }
+    catch (Int & i) {
+        cout << i.v;
+    }
 
 
-    N a;
-    a = 2.0;
-    cout << a.x;
     return 0;
 }

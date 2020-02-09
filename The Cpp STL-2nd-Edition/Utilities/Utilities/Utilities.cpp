@@ -5,6 +5,8 @@
 #include <algorithm> 
 #include<string>
 #include<vector>
+#include <utility>
+
 
 
 class Book {
@@ -21,6 +23,53 @@ public:
 	{
 
 	}
+
+	// Copy assignment operator.
+	Book& operator=(const Book& other)
+	{
+
+		if (this != &other)
+		{
+			_id = other._id;
+			_firstName = other._firstName;
+			_lastName = other._lastName;
+		} 
+		return *this;
+	}
+
+
+
+	Book(const Book& other): _id(other._id), _firstName
+	(other._firstName), _lastName(other._lastName){
+
+		std::cout << " copy constructor.." << std::endl;
+	}
+
+
+	Book& operator=(const Book&& other)
+	{
+
+		if (this != &other)
+		{
+			_id =  other._id;
+			_firstName =  other._firstName;
+			_lastName =  other._lastName;
+		}
+		return *this;
+	}
+
+	Book(Book&& other)  noexcept : _id(std::move(other._id)),
+		_firstName(std::move(other._firstName))
+		, _lastName(std::move(other._lastName)) {
+
+		std::cout << " move constructor.." << std::endl;
+
+	}
+
+	// Book(Book&&  ) = default;
+
+
+
 
 	int getId() const { return this->_id; }
 
@@ -94,6 +143,8 @@ int main()
 	std::cout << "minimum of mylist: " << maxElem << std::endl;
 
 
+	std::vector<Book> other;
+	other = mylist;
 
 	//  std::cout << "minimum of mylist: " << std::max(mylist, predicateMin) << std::endl;
 
@@ -123,7 +174,7 @@ int main()
 
 	std::cout << std::endl;
 
-	auto pairInt = std::minmax(2011, 2014);
+	std::pair<int,int> pairInt = std::minmax(2011, 2014);
 	auto pairStr = std::minmax(first, second);
 	auto pairSeq = std::minmax({ 3, 1, 2011, 2014, -5 });
 	auto pairAbs = std::minmax({ 3, 1, 2011, 2014, -5 }, [](int a, int b) {return (a) < (b); });
@@ -135,14 +186,4 @@ int main()
 
 	std::cout << std::endl;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+ 
