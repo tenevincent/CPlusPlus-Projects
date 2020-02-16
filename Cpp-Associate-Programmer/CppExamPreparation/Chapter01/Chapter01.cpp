@@ -9,6 +9,14 @@
 using namespace std;
 int main(void)
 {
+
+	if (!0) {
+		std::cout << "Is not false\n";
+	}
+	else {
+		std::cout << "Is false!\n";
+	}
+
 	int byte = 255;
 	cout << setbase(16) << byte << std::endl;
 
@@ -16,7 +24,7 @@ int main(void)
 	cout << fixed << x << " " << y << endl;
 	cout << scientific << x << " " << y << endl;
 
-    std::cout << "Hello World!\n";
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
