@@ -34,6 +34,13 @@ int main()
 
 void demo_vector1()
 {
+
+    float i = 1.0 / 2 * 2 / 1 * 2 / 4 * 4 / 2;
+    cout << i;
+
+    cout << 1/4/2/4/2;
+
+
  
         std::vector <A>v1;              //(1)
         v1.push_back(1);        //(1)
