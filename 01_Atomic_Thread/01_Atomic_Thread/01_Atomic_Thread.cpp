@@ -1,35 +1,47 @@
-// Chapter01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// 01_Atomic_Thread.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-
+#include <atomic>
 #include <iostream>
-#include <iomanip>
+#include <thread>
 
-using namespace std;
-int main(void)
-{
+std::atomic_int x;
+std::atomic_int y;
+int r1;
+int r2;
 
-	if (!0) {
-		std::cout << "Is not false\n";
-	}
-	else {
-		std::cout << "Is false!\n";
-	}
-
-	const int x = 23;
-
-
-
-	int byte = 255;
-	cout << setbase(16) << byte << std::endl;
-
-	float x = 2.5, y = 0.0000000025;
-	cout << fixed << x << " " << y << endl;
-	cout << scientific << x << " " << y << endl;
-
-    
+void writeX() {
+    x.store(1);
+    r1 = y.load();
 }
+
+void writeY() {
+    y.store(1);
+    r2 = x.load();
+}
+
+int main() {
+
+    std::cout << std::endl;
+
+    x = 0;
+    y = 0;
+    std::thread a(writeX);
+    std::thread b(writeY);
+    a.join();
+    b.join();
+    std::cout << "(r1, r2)= " << "(" << r1 << ", " << r2 << ")" << std::endl;
+
+    std::cout << std::endl;
+
+}
+
+
+
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

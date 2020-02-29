@@ -1,35 +1,33 @@
-// Chapter01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// 08_callOnce.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
+#include <thread>
+#include <mutex>
 
-#include <iostream>
-#include <iomanip>
+std::once_flag onceFlag;
 
-using namespace std;
-int main(void)
-{
-
-	if (!0) {
-		std::cout << "Is not false\n";
-	}
-	else {
-		std::cout << "Is false!\n";
-	}
-
-	const int x = 23;
-
-
-
-	int byte = 255;
-	cout << setbase(16) << byte << std::endl;
-
-	float x = 2.5, y = 0.0000000025;
-	cout << fixed << x << " " << y << endl;
-	cout << scientific << x << " " << y << endl;
-
-    
+void do_once() {
+    std::call_once(onceFlag, []() { std::cout << "Only once." << std::endl; });
 }
+
+int main() {
+
+    std::cout << std::endl;
+
+    std::thread t1(do_once);
+    std::thread t2(do_once);
+    std::thread t3(do_once);
+    std::thread t4(do_once);
+
+    t1.join();
+    t2.join();
+    t3.join();
+    t4.join();
+
+    std::cout << std::endl;
+}
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

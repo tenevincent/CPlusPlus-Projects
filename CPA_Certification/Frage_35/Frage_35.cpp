@@ -1,35 +1,26 @@
-// Chapter01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Frage_35.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
+using namespace std;
+
 
 #include <iostream>
-#include <iomanip>
-
 using namespace std;
-int main(void)
+int main()
 {
-
-	if (!0) {
-		std::cout << "Is not false\n";
-	}
-	else {
-		std::cout << "Is false!\n";
-	}
-
-	const int x = 23;
-
-
-
-	int byte = 255;
-	cout << setbase(16) << byte << std::endl;
-
-	float x = 2.5, y = 0.0000000025;
-	cout << fixed << x << " " << y << endl;
-	cout << scientific << x << " " << y << endl;
-
-    
+	char s1[] = "Hello";
+	char s2[] = "world";
+	char* const ptr = s1;
+	*ptr = 'a';
+	ptr = s2;
+	return 0;
 }
+
+
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
