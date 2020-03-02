@@ -1,35 +1,28 @@
-// Chapter01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Frage_36.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-
 #include <iostream>
-#include <iomanip>
-
+#include <string>
 using namespace std;
-int main(void)
+class First
 {
+	string s;
+public:
+	First() { s = ("Text"); }
+	~First() {  }
+	void Print() { cout << s; }
+};
+int main()
+{
+	First FirstObject;
 
-	if (!0) {
-		std::cout << "Is not false\n";
-	}
-	else {
-		std::cout << "Is false!\n";
-	}
-
-	const int x = 23;
-
-
-
-	int byte = 255;
-	cout << setbase(16) << byte << std::endl;
-
-	float x = 2.5, y = 0.0000000025;
-	cout << fixed << x << " " << y << endl;
-	cout << scientific << x << " " << y << endl;
-
-    
+	FirstObject.Print();
+	FirstObject.~First();
 }
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
