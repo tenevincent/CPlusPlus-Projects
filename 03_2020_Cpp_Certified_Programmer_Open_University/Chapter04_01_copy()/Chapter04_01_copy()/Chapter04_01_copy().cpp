@@ -17,17 +17,17 @@ void print(const T& value)
 int main()
 {
     int t[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    vector <int> vector01(t, t + 10);
+    vector <int> vec01(t, t + 10);
     cout << "Source collection:\n";
-    for_each(vector01.begin(), vector01.end(), print<int>); cout << endl;
-    deque <int> deque1(vector01.size()); //list for 10 elements;
+    for_each(vec01.begin(), vec01.end(), print<int>); cout << endl;
+    deque <int> dqueue1(vec01.size()); //list for 10 elements;
     cout << "Target collection before copy:\n";
-    for_each(deque1.begin(), deque1.end(), print<int>); cout << endl;
-    copy(vector01.begin(), vector01.end(), deque1.begin());
+    for_each(dqueue1.begin(), dqueue1.end(), print<int>); cout << endl;
+    copy(vec01.begin(), vec01.end(), dqueue1.begin());
 
 
     cout << "Target collection after copy:\n";
-    for_each(deque1.begin(), deque1.end(), print<int>); cout << endl;
+    for_each(dqueue1.begin(), dqueue1.end(), print<int>); cout << endl;
     cout << endl;
 
     cout << "Copy backward\n";
