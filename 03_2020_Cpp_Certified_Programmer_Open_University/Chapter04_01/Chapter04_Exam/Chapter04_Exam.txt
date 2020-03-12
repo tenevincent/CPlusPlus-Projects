@@ -1,0 +1,974 @@
+
+01)
+
+What will happen when you attempt to compile and run the following code?
+
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        copy(mynumbers, mynumbers + 7, v1.end());//LINE I
+        for_each(v1.begin(), v1.end(), printer);//LINE II
+        return 0;
+}
+-------------------------------------------------------------------------------
+Select the correct answer (single choice)
+compilation error in LINE I
+runtime error at LINE II
+program outputs: 3, 9, 0, 2, 1, 4,
+runtime error at LINE I
+compilation error in LINE II
+program outputs: 3, 9, 0, 2, 1, 4, 5,
+program outputs: 0, 1, 2, 3, 4, 5, 9,
+
+
+02)
+
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        copy_backward(mynumbers, mynumbers + 7, v1.rend());//LINE I
+        for_each(v1.begin(), v1.end(), printer);//LINE II
+        return 0;
+}
+------------------------------------------------------------------------------- 
+Select the correct answer (single choice)
+runtime error at LINE II
+compilation error in LINE I
+program outputs: 5, 4, 1, 2, 0, 9, 3,
+program outputs: 3, 9, 0, 2, 1, 4,
+compilation error in LINE II
+program outputs: 3, 9, 0, 2, 1, 4, 5,
+runtime error at LINE I
+program outputs: 5, 4, 1, 2, 9, 0,
+
+03)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        set<int> s1(mynumbers, mynumbers + 7);
+        vector<int> v1(s1.rbegin(), s1.rend());
+        swap(s1, v1);//LINE I
+        for_each(v1.begin(), v1.end(), printer);//LINE II
+        return 0;
+}
+-------------------------------------------------------------------------------
+Select the correct answer (single choice)
+program outputs: 3, 9, 0, 2, 1, 4, 5,
+compilation error in LINE II
+compilation error in LINE I
+program outputs: 0, 1, 2, 3, 4, 5, 9,
+program outputs: 0, 1, 2, 3, 4, 5,
+runtime error at LINE II
+runtime error at LINE I
+program outputs: 3, 9, 0, 2, 1, 4,
+
+
+
+04)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <deque>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        deque<int> d1(mynumbers, mynumbers + 7);
+        vector<int> v1(d1.rbegin(), d1.rend());
+        swap_ranges(v1.begin(), v1.end(), d1.begin());//LINE I
+        sort(d1.begin(), d1.end());//LINE II
+        for_each(d1.begin(), d1.end(), printer);
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+-------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+runtime error at LINE II
+program outputs: 5, 4, 1, 2, 0, 9, 3, 0, 1, 2, 3, 4, 5, 9,
+program outputs: 0, 1, 2, 3, 4, 5, 9, 3, 9, 0, 2, 1, 4, 5,
+compilation error in LINE II
+compilation error in LINE I
+program outputs: 0, 1, 2, 3, 4, 5, 3, 0, 2, 1, 4, 5,
+runtime error at LINE I
+program outputs: 5, 4, 1, 2, 0, 9, 0, 1, 2, 3, 4, 5,
+
+
+05)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        set<int> s1(mynumbers, mynumbers + 7);
+        vector<int> v1(s1.rbegin(), s1.rend());
+        swap_ranges(v1.begin(), s1.end(), v1.begin());//LINE I
+        swap_ranges(s1.begin(), v1.end(), s1.begin());//LINE II
+        for_each(s1.begin(), s1.end(), printer);
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+-------------------------------------------------------------------------------
+ Select the correct answer(s) (multiple choice)
+ program outputs: 0, 1, 2, 3, 4, 5, 9, 0, 1, 2, 3, 4, 5, 9,
+ runtime error at LINE II
+ program outputs: 9, 5, 4, 3, 2, 1, 0, 9, 5, 4, 3, 2, 1, 0,
+ compilation error in LINE I
+ compilation error in LINE II
+ runtime error at LINE I
+ program outputs: 0, 1, 2, 3, 4, 5, 9, 9, 5, 4, 3, 2, 1, 0,
+ 
+ 06)
+ 
+ What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+void multiply (int a) {
+        a*2;//LINE I
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        for_each(v1.begin(), v1.end(), multiply);
+        iter_swap(v1.begin(), mynumbers+6);//LINE II
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+-------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+compilation error in LINE II
+runtime error at LINE I
+program outputs: 5, 9, 0, 2, 1, 4, 3,
+program outputs: 3, 9, 0, 2, 1, 4, 5,
+compilation error in LINE I
+runtime error at LINE II
+program outputs: 5, 9, 0, 2, 1, 4, 5,
+ 
+
+
+07)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int  multiply (int a) {
+        return a*2;//LINE I
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        set<int> s1(mynumbers, mynumbers + 7);
+        transform(s1.begin(), s1.end(), v1.begin(), multiply);//LINE II
+        for_each(s1.begin(), s1.end(), printer);
+        return 0;
+}
+ -------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+program outputs: 0, 1, 2, 3, 4, 5, 9,
+runtime error at LINE I
+compilation error in LINE II
+compilation error in LINE I
+runtime error at LINE II
+program outputs: 0, 1, 2, 3, 4, 5,
+program outputs: 3, 9, 0, 2, 1, 4, 5,
+
+08)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int  multiply (int a) {
+        return a*2;//LINE I
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        set<int> s1(mynumbers, mynumbers + 7);
+        transform(s1.begin(), s1.end(), v1.begin(), multiply);//LINE II
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+ -------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+program outputs: 0, 1, 2, 3, 4, 5, 9,
+program outputs: 6, 18, 0, 4, 2, 8, 10,
+compilation error in LINE II
+program outputs: 0, 2, 4, 6, 8, 10, 18,
+runtime error at LINE II
+runtime error at LINE I
+compilation error in LINE I
+
+09)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+#include <deque>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int add (int a, int b)
+{    
+        return a+b;
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        set<int> s1(mynumbers, mynumbers + 7);
+        deque<int> d1;
+        transform(s1.begin(), s1.end(), v1.begin(), d1.begin(), add);//LINE I
+        for_each(d1.begin(), d1.end(), printer); //LINE II
+        return 0;
+}
+  -------------------------------------------------------------------------------
+Select the correct answer (single choice)
+program outputs: 3, 9, 0, 2, 1, 4, 5,
+runtime error at LINE II
+runtime error at LINE I or empty output
+program outputs: 0, 1, 2, 3, 4, 5, 9,
+compilation error in LINE I
+program outputs: 3, 10, 2, 5, 5, 9, 14,
+compilation error in LINE II
+
+10)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        set<int> s1(mynumbers, mynumbers + 7);
+        replace(v1.begin(), v1.end(), 9, 3);//LINE I
+        for_each(v1.begin(), v1.end(), printer);//LINE II
+        return 0;
+}
+ -------------------------------------------------------------------------------
+Select the correct answer(s) (multiple choice)
+ compilation error in LINE I
+ program outputs: 9, 3, 0, 2, 1, 4, 5,
+ program outputs: 3, 3, 0, 2, 1, 4, 5,
+ runtime error at LINE II
+ you can't call replace function on s1 set
+ compilation error in LINE II
+ program outputs: 0, 1, 2, 3, 4, 5, 9,
+ runtime error at LINE I
+
+11)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+bool classifier(int v) {
+        return v-3>0;
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        set<int> s1(mynumbers, mynumbers + 7);
+        replace_if(v1.begin(), v1.end(), classifier, 7);//LINE I
+        for_each(v1.begin(), v1.end(), printer);//LINE II
+        return 0;
+}
+ -------------------------------------------------------------------------------
+Select the correct answer(s) (multiple choice)
+ program outputs: 0, 1, 2, 3, 7, 7, 7,
+ runtime error at LINE II
+ compilation error in LINE II
+ you can't call replace function with classifier function as 3rd parameter
+ program outputs: 7, 7, 0, 2, 1, 7, 7,
+ compilation error in LINE I
+ runtime error at LINE I
+ program outputs: 3, 7, 0, 2, 1, 7, 7,
+ 
+ 12)
+ What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+bool classifier(int v) {
+        return v-3>0;
+}
+int main() {
+        int mynumbers[] = { 3, 9, 0, 2, 1, 4, 5 };
+        vector<int> v1(mynumbers, mynumbers + 7);
+        set<int> s1(mynumbers, mynumbers + 7);
+        replace(v1.begin(), v1.end(), classifier, 7);//LINE I
+        for_each(v1.begin(), v1.end(), printer);//LINE II
+        return 0;
+}
+ -------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+program outputs: 0, 1, 2, 3, 7, 7, 7,
+runtime error at LINE I
+compilation error in LINE I
+program outputs: 7, 7, 0, 2, 1, 7, 7,
+runtime error at LINE II
+program outputs: 3, 7, 0, 2, 1, 7, 7,
+compilation error in LINE II
+
+13)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        vector<int> v1(7,1);
+        fill(v1.begin()+3, v1.end()-1, 8);//LINE I
+        fill_n(v1.begin()+4, 2, 7);//LINE II
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+-------------------------------------------------------------------------------
+Select the correct answer (single choice)
+compilation error in LINE I
+compilation error in LINE II
+runtime error at LINE II
+runtime error at LINE I
+program outputs: 1, 1, 1, 8, 2, 7, 2,
+program outputs: 1, 1, 1, 8, 7, 7, 1,
+program outputs: 1, 1, 1, 8, 7, 7, 7,
+
+
+14)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {
+        cout << i << ", ";
+}
+int main() {
+        vector<int> v1(7,1);
+        fill(v1.begin()+3, v1.end()-1, 8);//LINE I
+        fill_n(v1.begin()+4, 5, 7);//LINE II
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+-------------------------------------------------------------------------------
+Select the correct answer (single choice)
+program outputs: 1, 1, 1, 8, 7, 7, 7,
+program outputs: 1, 1, 1, 8, 7, 7, 1,
+compilation error in LINE I
+runtime error at LINE II
+runtime error at LINE I
+program outputs: 1, 1, 1, 8, 2, 7, 2,
+compilation error in LINE II
+
+
+15)
+What will happen when you attempt to compile and run the following code?
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+using namespace std;
+void printer(int i) {    
+        cout << i << ", ";
+}
+struct sequence {
+        int val,inc;
+public:
+        sequence(int s, int i):val(s),inc(i){}
+        operator int() const{//LINE I
+                int r = val;
+                return r;
+        }
+};
+int main() {
+        vector<int> v1(7);
+        fill(v1.begin(), v1.end(), sequence(1,2));//LINE II
+        for_each(v1.begin(), v1.end(), printer);
+        return 0;
+}
+ -------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+compilation error in LINE II
+program outputs: 2, 2, 2, 2, 2, 2, 2,
+runtime error at LINE I
+program outputs: 1, 3, 5, 7, 9, 11, 13,
+program outputs: 1, 2, 3, 4, 5, 6, 7,
+runtime error at LINE II
+program outputs: 1, 1, 1, 1, 1, 1, 1,
+compilation error in LINE I
+ 
+16)
+
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void print(int v) {
+        cout<<v<<", ";
+}
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()() {
+                return start++;//LINE I
+        }
+};
+int main() {
+        vector<int> v1(7);
+        generate_n(v1.begin(), 7, Sequence(1));//LINE II
+        for_each(v1.begin(), v1.end(), print);
+        return 0;
+}
+ -------------------------------------------------------------------------------
+Select the correct answer (single choice)
+program outputs: 7, 7, 7, 7, 7, 7, 7,
+compilation error in LINE II
+compilation error in LINE I
+program outputs: 1, 2, 3, 4, 5, 6, 7,
+program outputs: 1, 1, 1, 1, 1, 1, 1,
+runtime error at LINE II
+runtime error at LINE I
+
+17)
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void print(int v) {
+        cout<<v<<", ";
+}
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()() {
+                return start++;//LINE I
+        }
+};
+int main() {
+        vector<int> v1(7);
+        generate_n(v1.begin(), 7, Sequence());//LINE II
+        for_each(v1.begin(), v1.end(), print);
+        return 0;
+}
+ -------------------------------------------------------------------------------
+Select the correct answer (single choice)
+program outputs: 1, 2, 3, 4, 5, 6, 7,
+runtime error at LINE II
+compilation error in LINE I
+program outputs: 1, 1, 1, 1, 1, 1, 1,
+runtime error at LINE I
+compilation error in LINE II
+program outputs: 7, 7, 7, 7, 7, 7, 7,
+
+18)
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <set>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void print(int v)
+{    
+        cout<<v<<", ";
+}
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()() { return start++; }
+};
+bool predicate(int v) { return v%2==0; }
+int main() {
+        vector<int> v1(7);
+        generate_n(v1.begin(), 7, Sequence(1));//LINE I
+        remove_if(v1.begin(), v1.end(), predicate);//LINE II
+        for_each(v1.begin(), v1.end(), print);
+        return 0;
+}
+  -------------------------------------------------------------------------------
+ Select the correct answer(s) (multiple choice)
+ runtime error at LINE I
+ runtime error at LINE II
+ you can't call remove_if function on set
+ program outputs: 1, 3, 5, 7, 5, 6, 7,
+ program outputs: 1, 3, 5, 7,
+ compilation error in LINE I
+ compilation error in LINE II
+ program outputs: 2, 4, 6,
+ 
+ 
+19)
+
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <set>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void print(int v)
+{    
+        cout<<v<<", ";
+}
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()() { return start++; }
+};
+bool predicate(int v) { return v%2==0; }
+int main() {
+        vector<int> v1(7);
+        generate_n(v1.begin(), 7, Sequence());//LINE I
+        remove_if(v1.begin(), v1.end(), predicate);//LINE II
+        for_each(v1.begin(), v1.end(), print);
+        return 0;
+}
+   -------------------------------------------------------------------------------
+Select the correct answer(s) (multiple choice)
+ compilation error in LINE I
+ program outputs: 2, 4, 6,
+ runtime error at LINE II
+ program outputs: 1, 3, 5, 7, 5, 6, 7,
+ compilation error in LINE II
+ runtime error at LINE I
+ program outputs: 1, 3, 5, 7,
+ you can't call remove_if function on set
+ 
+ 20)
+ What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return 3*(start++ % 2);//LINE I
+        }
+};
+int main() {
+        vector<int> v1(7);
+        generate(v1.begin(), v1.end(), Sequence(10));//LINE II
+        unique(v1.begin(),v1.end());
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        return 0;
+}
+-------------------------------------------------------------------------------
+ Select the correct answer (single choice)
+compilation error in LINE II
+runtime error at LINE I
+compilation error in LINE I
+runtime error at LINE II
+program outputs: 3, 0, 3, 0, 3, 0, 3,
+you can't call unique function on vector
+program outputs: 0, 3, 0, 3, 0, 3, 0,
+program outputs: 0, 3, 0, 3, 0, 3, 0, 3, 0, 3,
+
+21)
+
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return 3*(start++ % 2);
+        }
+};
+int main() {
+        vector<int> v1(4);
+        vector<int> v2(4);
+        generate(v1.begin(), v1.end(), Sequence(10));//LINE I
+        sort(v1.rbegin(), v1.rend());
+        unique_copy(v1.begin(),v1.end(), v2.begin());//LINE II
+        for_each(v2.begin(), v2.end(), Out<int>(cout) );
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        return 0;
+}
+-------------------------------------------------------------------------------
+Select the correct answer (single choice)
+runtime error at LINE II
+program outputs: 3, 0, 0, 0, 3, 3, 0, 0, 3, 0, 0, 0, 3, 3, 0, 0,
+program outputs: 3, 0, 3, 0, 3, 0, 3, 0,
+compilation error in LINE I
+runtime error at LINE I
+compilation error in LINE II
+you can't call unique_copy function on these vectors (v1, v2)
+program outputs: 3, 0, 0, 0, 3, 3, 0, 0,
+
+
+22)
+
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <set>
+#include <deque>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return start++ % 7;
+        }
+};
+int main() {
+        vector<int> v1(3);
+        generate(v1.begin(), v1.end(), Sequence(10));//LINE I
+        set<int> s1(v1.rbegin(), v1.rend());
+        deque<int> d1(s1.rbegin(), s1.rend());
+        reverse(v1.begin(),v1.end());
+        reverse(d1.begin(), d1.end());//LINE II
+        for_each(s1.begin(), s1.end(), Out<int>(cout) );
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        for_each(d1.begin(), d1.end(), Out<int>(cout) );
+        return 0;
+}
+ -------------------------------------------------------------------------------
+ Select the correct answer(s) (multiple choice)
+ you can't call reverse function on d1 deque
+ program outputs: 3, 4, 5, 3, 4, 5, 3, 4, 5,
+ runtime error at LINE II
+ runtime error at LINE I
+ compilation error in LINE I
+ program outputs: 3, 4, 5, 5, 4, 3, 3, 4, 5,
+ program outputs: 5, 4, 3, 3, 4, 5, 3, 4, 5,
+ you can't call reverse function on s1 set
+ compilation error in LINE II
+ 
+ 
+ 23)
+ What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <functional>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return start++ % 7;
+        }
+};
+int main() {
+        vector<int> v1(4);
+        vector<int> v2(4);
+        generate(v1.begin(), v1.end(), Sequence(10));
+        reverse_copy(v1.begin(),v1.end(), v2.rbegin());//LINE I
+        sort(v2.begin(), v2.end(), less_equal<int>());;//LINE II
+        for_each(v2.begin(), v2.end(), Out<int>(cout) );
+        return 0;
+}
+------------------------------------------------------------------------------- 
+ Select the correct answer (single choice)
+compilation error in LINE II
+program outputs: 0, 1, 2, 3,
+runtime error at LINE II
+program outputs: 3, 4, 5, 6,
+you can't call reverse_copy function on v1 and v2 vectors
+runtime error at LINE I
+you can't call sort function on v2 vector
+program outputs: 10, 11, 12, 13,
+compilation error in LINE I
+ 
+ 
+ 24)
+ What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <functional>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return start++ % 7;
+        }
+};
+int main() {
+        vector<int> v1(4);
+        generate(v1.rbegin(), v1.rend(), Sequence(10));//LINE I
+        rotate(v1.begin(),v1.begin() + 1, v1.end() );//LINE II
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        return 0;
+}
+------------------------------------------------------------------------------- 
+ Select the correct answer (single choice)
+program outputs: 3, 4, 5, 6,
+compilation error in LINE II
+program outputs: 10, 11, 12, 13
+program outputs: 5, 4, 3, 6,
+runtime error at LINE II
+program outputs: 12, 11, 10, 13
+you can't call rotate function on v1 vector
+runtime error at LINE I
+compilation error in LINE I
+
+25)
+
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <functional>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return start++ % 7;
+        }
+};
+int main() {
+        vector<int> v1(4);
+        generate(v1.rbegin(), v1.rend(), Sequence(10));//LINE I
+        random_shuffle(v1.begin(),v1.begin());//LINE II
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        return 0;
+}
+------------------------------------------------------------------------------- 
+ Select the correct answer (single choice)
+program outputs: 3, 4, 5, 6,
+runtime error at LINE I
+program outputs: 6, 5, 3, 4,
+program outputs: 6, 5, 4, 3,
+compilation error in LINE II
+you can't call random_shuffle function on v1 vector
+runtime error at LINE II
+compilation error in LINE I
+you can't predict results of this code
+
+
+26)
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <functional>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return start++ % 7;
+        }
+};
+struct Odd {    bool operator()(int v) { return v%2==0; }};
+int main() {
+        vector<int> v1(4);
+        generate(v1.rbegin(), v1.rend(), Sequence(10));//LINE I
+        partition(v1.begin(),v1.begin(), Odd());//LINE II
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        return 0;
+}
+-------------------------------------------------------------------------------  
+ Select the correct answer (single choice)
+you can't predict results of this code
+compilation error in LINE II
+program outputs: 3, 4, 5, 6,
+program outputs: 6, 5, 3, 4,
+runtime error at LINE I
+you can't call partition function on v1 vector
+runtime error at LINE II
+program outputs: 6, 5, 4, 3,
+compilation error in LINE I
+
+27)
+What will happen when you attempt to compile and run the following code?
+
+#include <vector>
+#include <iostream>
+#include <functional>
+#include <algorithm>
+using namespace std;
+template<class T>struct Out {
+        ostream  & out;
+        Out(ostream & o): out(o){}
+        void operator()(const T & val ) {
+                out<<val<<", ";
+        }
+};
+struct Sequence {
+        int start;
+        Sequence(int start):start(start){}
+        int operator()()
+        {
+                return start++ % 7;
+        }
+};
+struct Odd {    bool operator()(int v) { return v%2==0; }};
+int main() {
+        vector<int> v1(4);
+        generate(v1.rbegin(), v1.rend(), Sequence(10));//LINE I
+        stable_partition(v1.begin(),v1.begin(), Odd());//LINE II
+        for_each(v1.begin(), v1.end(), Out<int>(cout) );
+        return 0;
+}
+-------------------------------------------------------------------------------   
+Select the correct answer (single choice)
+compilation error in LINE I
+program outputs: 6, 5, 4, 3,
+you can't predict results of this code
+runtime error at LINE II
+runtime error at LINE I
+program outputs: 6, 5, 3, 4,
+program outputs: 3, 4, 5, 6,
+you can't call stable_partition function on v1 vector
+ 
+ 
+ 
+

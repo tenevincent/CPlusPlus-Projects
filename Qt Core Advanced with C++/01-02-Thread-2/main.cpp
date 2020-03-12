@@ -5,7 +5,7 @@
 #include <QTimer>
 #include <QSharedPointer>
 #include "test.h"
-
+#include <QObject>
 
 
 static QSharedPointer<QThread> sptr;
@@ -32,6 +32,9 @@ int main(int argc, char *argv[])
     test.moveToThread(&thread);
     qInfo() << "Timer Thread: " << test.thread();
 
+
+
+   //  a.connect(thread,&QThread::started, test,&TestObject::start);
 
     test.start();
     qInfo() << "Thread State:" << thread.isRunning();

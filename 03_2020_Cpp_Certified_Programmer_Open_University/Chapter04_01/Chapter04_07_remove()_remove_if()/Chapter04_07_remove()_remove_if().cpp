@@ -23,11 +23,13 @@ struct Even
 
 int main()
 {
-	int t[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	list <int> l1(t, t + 10);
+	int t[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,6 };
+	list <int> l1(t, t + 11);
 	cout << "Source collection:\n";
 	cout << "l1: "; for_each(l1.begin(), l1.end(), print<int>); cout << endl << endl;
 	cout << "Removing value 6:\n";
+
+
 	list<int>::iterator newEnd = remove(l1.begin(), l1.end(), 6);
 
 
