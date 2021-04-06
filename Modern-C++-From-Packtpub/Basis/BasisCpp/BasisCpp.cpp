@@ -4,7 +4,17 @@
 #include <iostream>
 #include "source.h"
 
+int Factorial(int n) {
 
+	int result = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		result *= i;
+	}
+	return result;
+
+		 
+}
 
 int main()
 {
@@ -13,6 +23,10 @@ int main()
 
 	cout << Add(10, 5) << endl;
 
+
+
+	int result = Factorial(5);
+	cout<< "Factorial is " << result << endl;
 
 
 	int i{ 0 };
