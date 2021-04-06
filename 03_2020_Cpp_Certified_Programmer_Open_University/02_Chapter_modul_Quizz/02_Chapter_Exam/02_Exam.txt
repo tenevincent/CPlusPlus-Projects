@@ -662,7 +662,7 @@ int main() {
         vector<int> v(mynumbers, mynumbers+7);
         map<int, string> m;
         for (vector<int>::iterator i = v.begin(); i != v.end(); i++) {
-                stringstream s;        
+                stringstream s;       , 
                 s << *i;
                 m.insert(pair<int, string>(*i, s.str()));
         }

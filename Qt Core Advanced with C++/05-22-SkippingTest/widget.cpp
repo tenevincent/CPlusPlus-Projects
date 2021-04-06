@@ -16,6 +16,8 @@ void Widget::test()
 
     //Exits
     qInfo() << "Testing: " << value;
+
+
 }
 
 void Widget::test_data()
