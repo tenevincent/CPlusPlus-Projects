@@ -1,5 +1,0 @@
-Mo Jan 20 10:25:46 2020 - Info: This is a info message in %2 file: ..\05-01-ExploringQDebug\main.cpp line: 50
-Mo Jan 20 10:25:47 2020 - Debug: This is a debug message file: ..\05-01-ExploringQDebug\main.cpp line: 51
-Mo Jan 20 10:25:47 2020 - Warning: This is a warning message file: ..\05-01-ExploringQDebug\main.cpp line: 52
-Mo Jan 20 10:25:47 2020 - Critical: This is a critical message file: ..\05-01-ExploringQDebug\main.cpp line: 53
-Mo Jan 20 10:25:47 2020 - Fatal: THIS IS SPARTA!!! file: ..\05-01-ExploringQDebug\main.cpp line: 54

@@ -1,5 +1,0 @@
-Mo Jan 20 10:31:32 2020 - Debug: This is a debug message file: ..\05-01-ExploringQDebug\main.cpp line: 67
-Mo Jan 20 10:55:28 2020 - Debug: This is a debug message file: ..\05-01-ExploringQDebug\main.cpp line: 67
-Mo Jan 20 10:56:11 2020 - Debug: This is a debug message file: ..\05-01-ExploringQDebug\main.cpp line: 67
-Mo Jan 20 10:56:25 2020 - Debug: This is a debug message file: ..\05-01-ExploringQDebug\main.cpp line: 67
-Mo Jan 20 10:57:33 2020 - Debug: This is a debug message file: ..\05-01-ExploringQDebug\main.cpp line: 67
