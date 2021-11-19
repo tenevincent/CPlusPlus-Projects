@@ -142,6 +142,7 @@
     <ClCompile Include="AnotherClass.cpp" />
     <ClCompile Include="BaseClass.cpp" />
     <ClCompile Include="DerivedClass.cpp" />
+    <ClCompile Include="MyClass.cpp" />
     <ClCompile Include="myfunction.cpp" />
     <ClCompile Include="MainApp.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="AnotherClass.h" />
     <ClInclude Include="BaseClass.h" />
     <ClInclude Include="DerivedClass.h" />
+    <ClInclude Include="MyClass.h" />
     <ClInclude Include="myheader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

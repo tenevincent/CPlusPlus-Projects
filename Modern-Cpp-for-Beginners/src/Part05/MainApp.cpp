@@ -6,9 +6,21 @@
 #include "DerivedClass.h"
 #include "myheader.h"
 #include "AnotherClass.h"
+#include "MyClass.h"
+enum class Colors
+{
+	Red,
+	Green,
+	Blue
+};
+
+void demo_enums();
+void demo_class_template();
 
 int main()
 {
+
+	demo_class_template();
 
 	//A::B::myfunction();
 	//using namespace A::B;
@@ -101,6 +113,40 @@ int main()
 
 	}
 
+	{
+		int x = 123;
+		int* pint = &x;
+		void* pvoid = pint;
+	}
 
 	std::cout << "Hello World!\n";
+}
+
+void demo_class_template() {
+	MyClass<double> o{ 123 };
+	std::cout << "The value of the data member is: " << o.getx() << '\n';
+	o.setx(456);
+	std::cout << "The value of the data member is: " << o.getx() << '\n';
+	MyClass<double> o2{ 4.25 };
+	std::cout << "The value of the data member is: " << o2.getx() << '\n';
+}
+
+void demo_enums() {
+
+
+	Colors mycolors = Colors::Green;
+	switch (mycolors)
+	{
+	case Colors::Red:
+		std::cout << "The color is Red." << '\n';
+		break;
+	case Colors::Green:
+		std::cout << "The color is Green." << '\n';
+		break;
+	case Colors::Blue:
+		std::cout << "The color is Blue." << '\n';
+		break;
+	default:
+		break;
+	}
 }

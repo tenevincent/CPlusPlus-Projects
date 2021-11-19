@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dd2209c2-fb8e-41d6-9941-36a1056799b8}</ProjectGuid>
-    <RootNamespace>ThirdModuleApp</RootNamespace>
+    <ProjectGuid>{bbc27aac-4b50-4f48-a58d-0c63cad52c90}</ProjectGuid>
+    <RootNamespace>Part06</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Part03</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -117,7 +116,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,17 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseClass.cpp" />
+    <ClCompile Include="DerivedClass.cpp" />
+    <ClCompile Include="MyBaseClass.cpp" />
     <ClCompile Include="MyClass.cpp" />
-    <ClCompile Include="MyNewClass.cpp" />
-    <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Student.cpp" />
-    <ClCompile Include="MainApp.cpp" />
+    <ClCompile Include="MyderivedClass.cpp" />
+    <ClCompile Include="Part06.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseClass.h" />
+    <ClInclude Include="DerivedClass.h" />
+    <ClInclude Include="MyBaseClass.h" />
     <ClInclude Include="MyClass.h" />
-    <ClInclude Include="MyNewClass.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="Student.h" />
+    <ClInclude Include="MyderivedClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

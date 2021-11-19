@@ -15,33 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MainApp.cpp">
+    <ClCompile Include="Part06.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="MyderivedClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="MyBaseClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MyClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyNewClass.cpp">
+    <ClCompile Include="BaseClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DerivedClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Person.h">
+    <ClInclude Include="MyderivedClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Student.h">
+    <ClInclude Include="MyBaseClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyNewClass.h">
+    <ClInclude Include="BaseClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DerivedClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
