@@ -5,12 +5,24 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <memory>
 #include <map>
 #include <memory>
+#include "ClassB.h"
+#include "ClassD.h"
 
+using std::unique_ptr;
 
 int main()
 {
+
+	{
+		unique_ptr<ClassB> bObj = std::make_unique<ClassB>(1);	
+		unique_ptr<ClassD> dObject = std::make_unique<ClassD>(*bObj);
+		dObject->print();
+	}
+
+
 	//std::vector<int> vec = { 1, 2, 3, 4, 5 };
 	//for (auto it = vec.begin(); it != vec.end(); it++)
 	//{
